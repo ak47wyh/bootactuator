@@ -75,5 +75,28 @@ management.port=9091
 关闭http端点
 management.port=-1
 
+8.
+定制HealthIndicator
+只需实现HealsthIndicator接口，并注册bean
+
+9.
+使用jconsole监控JMX
+在控制台输出jconsole
+
+10.
+通过SSH或TELNET监控管理应用
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-remote-shell</artifactId>
+</dependency>
+添加依赖，启动服务，控制台输出ssh访问密码，用户名为user 端口2000
+(也可在application.properties文件中定制用户账号密码
+shell.auth.simple.user.name=admin
+shell.auth.simple.user.password=admin
+)
+然后通过SSH客户端puTTY,SecureCRT访问
+
+
+
 
 
